@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Inicio from "./features/pages/Inicio";
+import Dashboard from "./layout/Dashboard";
 import "./App.css";
+
 function App() {
   return (
     <Router>
@@ -12,19 +14,20 @@ function App() {
         <Link to="/alumnos">
           <i className="bi bi-people me-2"></i> Alumnos
         </Link>
+
         <Link to="/docentes">
-        <i class="bi bi-people me-2"></i> Docentes
+          <i className="bi bi-people me-2"></i> Docentes
         </Link>
+
         <Link to="/materias">
-        <i class="bi bi-book me-2"></i> Materias
+          <i className="bi bi-book me-2"></i> Materias
         </Link>
       </div>
-
-      
 
       <div className="content">
         <Routes>
           <Route path="/" element={<Inicio />} />
+          <Route path="/alumnos" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
