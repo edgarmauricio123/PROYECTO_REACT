@@ -1,0 +1,166 @@
+/* CONTENEDOR AISLADO */
+.materias-form-container .contentdashboard {
+  margin-left: 280px;
+  padding: 20px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FORMULARIO */
+.materias-form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+
+  background: rgba(99, 102, 241, 0.95);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(99, 102, 241, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.materias-form-container .form:hover {
+  transform: translateY(-3px);
+}
+
+/* TITULO */
+.materias-form-container .title {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #ffffff;
+}
+
+.materias-form-container .title::before,
+.materias-form-container .title::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee;
+}
+
+.materias-form-container .title::after {
+  animation: pulse 1.2s infinite;
+}
+
+/* INPUTS */
+.materias-form-container .flex {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.materias-form-container .form label {
+  position: relative;
+  width: 100%;
+}
+
+.materias-form-container .form label .input {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  width: 100%;
+  padding: 18px 10px 6px 12px;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 14px;
+
+  backdrop-filter: blur(5px);
+
+  transition: all 0.25s ease;
+}
+
+/* EFECTO FOCUS PRO */
+.materias-form-container .form label .input:focus {
+  border: 1px solid #22d3ee;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* LABEL FLOTANTE */
+.materias-form-container .form label .input + span {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 12px;
+  top: 0px;
+  font-size: 0.85em;
+  transition: 0.25s ease;
+}
+
+.materias-form-container .form label .input:placeholder-shown + span {
+  top: 13px;
+  font-size: 0.9em;
+}
+
+.materias-form-container .form label .input:focus + span,
+.materias-form-container .form label .input:valid + span {
+  color: #22d3ee;
+  top: 4px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* BOTÓN */
+.materias-form-container .submit {
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #1e1b4b, #4338ca);
+
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.materias-form-container .submit:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  box-shadow: 0 10px 20px rgba(34, 211, 238, 0.4);
+}
+
+/* TEXTO */
+.materias-form-container .signin {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+/* ANIMACIÓN */
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

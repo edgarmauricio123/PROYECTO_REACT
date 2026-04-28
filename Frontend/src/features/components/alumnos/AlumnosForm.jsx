@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "../alumnos/AlumnosForm.css";
 function AlumnosForm() {
   return (
+    
     <div className="contentdashboard">
       <form class="form">
         <p class="title">Formulario de Alumnos </p>

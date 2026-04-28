@@ -1,0 +1,101 @@
+/* CONTENEDOR */
+.contentdashboard {
+  margin-left: 240px;
+  padding: 25px;
+  min-height: 100vh;
+
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* TABLA */
+.table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  overflow: hidden;
+
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(99, 102, 241, 0.2);
+
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* HEADER */
+.table thead {
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  color: white;
+}
+
+.table thead th {
+  padding: 15px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+/* BODY */
+.table tbody tr {
+  transition: all 0.25s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* EFECTO HOVER */
+.table tbody tr:hover {
+  background: rgba(99, 102, 241, 0.1);
+  transform: scale(1.01);
+}
+
+/* CELDAS */
+.table tbody td {
+  padding: 14px;
+  font-size: 14px;
+  color: #1e1b4b;
+}
+
+/* FILAS ALTERNADAS */
+.table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* ACCIONES (puedes usar botones después) */
+.table tbody td:last-child {
+  display: flex;
+  gap: 8px;
+}
+
+/* BOTONES OPCIONALES */
+.btn {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-edit {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #16a34a;
+}
+
+.btn-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+}
