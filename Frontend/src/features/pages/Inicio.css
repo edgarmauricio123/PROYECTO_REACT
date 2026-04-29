@@ -9,16 +9,15 @@ body {
   margin: 35px auto;
 }
 
-
-/* From Uiverse.io by codebykay101 */ 
-.container {
+/* From Uiverse.io by codebykay101 */
+.inicio-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container .glass {
+.inicio-container .inicio-glass {
   position: relative;
   width: 180px;
   height: 200px;
@@ -35,12 +34,12 @@ body {
   transform: rotate(calc(var(--r) * 1deg));
 }
 
-.container:hover .glass {
+.inicio-container:hover .inicio-glass {
   transform: rotate(0deg);
   margin: 0 10px;
 }
 
-.container .glass::before {
+.inicio-container .inicio-glass::before {
   content: attr(data-text);
   position: absolute;
   bottom: 0;
@@ -52,63 +51,60 @@ body {
   align-items: center;
   color: #3730a3;
 }
-.container .glass svg {
+
+.inicio-container .inicio-glass svg {
   font-size: 2.5em;
   fill: #3730a3;
 }
 
 body {
-        margin: 0;
-        background: #f3f4f6;
-        font-family: Arial, sans-serif;
-      }
+  margin: 0;
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
 
-   
+/* HEADER */
+.header {
+  margin-left: 240px;
+  padding: 15px 30px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
 
-      /* HEADER */
-      .header {
-        margin-left: 240px;
-        padding: 15px 30px;
-        background: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #ddd;
-      }
+/* CONTENT */
+.inicio-contentdashboard {
+  margin-left: 240px;
+  padding: 20px;
+}
 
-      /* CONTENT */
-      .contentdashboard {
-        margin-left: 240px;
-        padding: 20px;
-      }
+/* CARDS */
+.inicio-card-dashboard {
+  border-radius: 15px;
+  color: white;
+  padding: 20px;
+}
 
-      /* CARDS */
-      .card-dashboard {
-        border-radius: 15px;
-        color: white;
-        padding: 20px;
-      }
+.inicio-card1 {
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+}
 
-      .card1 {
-        background: linear-gradient(45deg, #6366f1, #8b5cf6);
-      }
-      .card2 {
-        background: linear-gradient(45deg, #3b82f6, #60a5fa);
-      }
-      .card3 {
-        background: linear-gradient(45deg, #10b981, #34d399);
-      }
-      .card4 {
-        background: linear-gradient(45deg, #84cc16, #a3e635);
-      }
+.inicio-card2 {
+  background: linear-gradient(45deg, #3b82f6, #60a5fa);
+}
 
+.inicio-card3 {
+  background: linear-gradient(45deg, #10b981, #34d399);
+}
 
+.inicio-card4 {
+  background: linear-gradient(45deg, #84cc16, #a3e635);
+}
 
-
-
-
-      /* From Uiverse.io by vinodjangid07 */ 
-.loader {
+/* From Uiverse.io by vinodjangid07 */
+.inicio-loader {
   width: fit-content;
   height: fit-content;
   display: flex;
@@ -116,7 +112,7 @@ body {
   justify-content: center;
 }
 
-.truckWrapper {
+.inicio-truckWrapper {
   width: 1250px;
   height: 300px;
   display: flex;
@@ -126,15 +122,17 @@ body {
   justify-content: flex-end;
   overflow-x: hidden;
 }
+
 /* truck upper body */
-.truckBody {
+.inicio-truckBody {
   width: 130px;
   height: fit-content;
   margin-bottom: 6px;
-  animation: motion 1s linear infinite;
+  animation: inicio-motion 1s linear infinite;
 }
+
 /* truck suspension animation*/
-@keyframes motion {
+@keyframes inicio-motion {
   0% {
     transform: translateY(0px);
   }
@@ -145,8 +143,9 @@ body {
     transform: translateY(0px);
   }
 }
+
 /* truck's tires */
-.truckTires {
+.inicio-truckTires {
   width: 130px;
   height: fit-content;
   display: flex;
@@ -156,11 +155,12 @@ body {
   position: absolute;
   bottom: 0;
 }
-.truckTires svg {
+
+.inicio-truckTires svg {
   width: 24px;
 }
 
-.road {
+.inicio-road {
   width: 100%;
   height: 1.5px;
   background-color: #282828;
@@ -169,7 +169,8 @@ body {
   align-self: flex-end;
   border-radius: 3px;
 }
-.road::before {
+
+.inicio-road::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -177,10 +178,11 @@ body {
   background-color: #282828;
   right: -50%;
   border-radius: 3px;
-  animation: roadAnimation 1.4s linear infinite;
+  animation: inicio-roadAnimation 1.4s linear infinite;
   border-left: 10px solid white;
 }
-.road::after {
+
+.inicio-road::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -188,19 +190,19 @@ body {
   background-color: #282828;
   right: -65%;
   border-radius: 3px;
-  animation: roadAnimation 1.4s linear infinite;
+  animation: inicio-roadAnimation 1.4s linear infinite;
   border-left: 4px solid white;
 }
 
-.lampPost {
+.inicio-lampPost {
   position: absolute;
   bottom: 0;
   right: -90%;
   height: 90px;
-  animation: roadAnimation 1.4s linear infinite;
+  animation: inicio-roadAnimation 1.4s linear infinite;
 }
 
-@keyframes roadAnimation {
+@keyframes inicio-roadAnimation {
   0% {
     transform: translateX(0px);
   }

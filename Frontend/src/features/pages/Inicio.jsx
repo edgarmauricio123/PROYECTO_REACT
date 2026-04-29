@@ -40,32 +40,32 @@ function Inicio() {
   }, []);
 
   return (
-    <div className="contentdashboard">
+    <div className="inicio-contentdashboard">
       {/* CARDS */}
       <div className="row g-4 mb-4">
         <div className="col-md-3">
-          <div className="card-dashboard card1">
+          <div className="inicio-card-dashboard inicio-card1">
             <h6>Alumnos</h6>
             <h2>86</h2>
           </div>
         </div>
 
         <div className="col-md-3">
-          <div className="card-dashboard card2">
+          <div className="inicio-card-dashboard inicio-card2">
             <h6>Maestros</h6>
             <h2>75</h2>
           </div>
         </div>
 
         <div className="col-md-3">
-          <div className="card-dashboard card3">
+          <div className="inicio-card-dashboard inicio-card3">
             <h6>Materias</h6>
             <h2>45,673</h2>
           </div>
         </div>
 
         <div className="col-md-3">
-          <div className="card-dashboard card4">
+          <div className="inicio-card-dashboard inicio-card4">
             <h6>Total</h6>
             <h2>93</h2>
           </div>
@@ -83,8 +83,8 @@ function Inicio() {
       <div className="my-5"></div>
 
       {/* resto de tu código (glass cards + loader) */}
-      <div className="container">
-        <div data-text="Github" style={{ "--r": "-15" }} className="glass">
+      <div className="inicio-container">
+        <div data-text="Github" style={{ "--r": "-15" }} className="inicio-glass">
           {/* SVG */}
           <svg
             viewBox="0 0 496 512"
@@ -95,7 +95,7 @@ function Inicio() {
           </svg>
         </div>
 
-        <div data-text="Code" style={{ "--r": "5" }} className="glass">
+        <div data-text="Code" style={{ "--r": "5" }} className="inicio-glass">
           {/* SVG */}
           <svg
             viewBox="0 0 640 512"
@@ -106,7 +106,7 @@ function Inicio() {
           </svg>
         </div>
 
-        <div data-text="Earn" style={{ "--r": "25" }} className="glass">
+        <div data-text="Earn" style={{ "--r": "25" }} className="inicio-glass">
           {" "}
           {/* SVG */}
           <svg
@@ -119,18 +119,18 @@ function Inicio() {
         </div>
       </div>
 
-      <div className="loader">
+      <div className="inicio-loader">
         {/* loader completo aquí */}
 
         {/* <!-- From Uiverse.io by vinodjangid07 -->  */}
-        <div class="loader">
-          <div class="truckWrapper">
-            <div class="truckBody">
+        <div class="inicio-loader">
+          <div class="inicio-truckWrapper">
+            <div class="inicio-truckBody">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 198 93"
-                class="trucksvg"
+                class="inicio-trucksvg"
               >
                 <path
                   stroke-width="3"
@@ -192,12 +192,12 @@ function Inicio() {
                 ></rect>
               </svg>
             </div>
-            <div class="truckTires">
+            <div class="inicio-truckTires">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 30 30"
-                class="tiresvg"
+                class="inicio-tiresvg"
               >
                 <circle
                   stroke-width="3"
@@ -213,7 +213,7 @@ function Inicio() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 30 30"
-                class="tiresvg"
+                class="inicio-tiresvg"
               >
                 <circle
                   stroke-width="3"
@@ -226,7 +226,7 @@ function Inicio() {
                 <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
               </svg>
             </div>
-            <div class="road"></div>
+            <div class="inicio-road"></div>
 
             <svg
               xml:space="preserve"
@@ -236,7 +236,7 @@ function Inicio() {
               id="Capa_1"
               version="1.1"
               fill="#000000"
-              class="lampPost"
+              class="inicio-lampPost"
             >
               <path
                 d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993

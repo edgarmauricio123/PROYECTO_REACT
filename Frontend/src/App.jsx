@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Inicio from "./features/pages/Inicio";
 import Dashboard from "../src/features/pages/Dashboard";
 import Materias from "../src/features/pages/Materias";
+import Docentes from "../src/features/pages/Docentes";
 
 import "./App.css";
 
@@ -30,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/alumnos" element={<Dashboard />} />
+          <Route path="/docentes" element={<Docentes />} />
           <Route path="/materias" element={<Materias />} />
         </Routes>
       </div>
