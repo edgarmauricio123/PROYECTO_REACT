@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Inicio from "./features/pages/Inicio";
-import Dashboard from "./layout/Dashboard";
+import Dashboard from "../src/features/pages/Dashboard";
+import Materias from "../src/features/pages/Materias";
+
 import "./App.css";
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/alumnos" element={<Dashboard />} />
+          <Route path="/materias" element={<Materias />} />
         </Routes>
       </div>
     </Router>
