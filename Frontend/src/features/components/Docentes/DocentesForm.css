@@ -1,0 +1,156 @@
+.docentes-form-container {
+  margin-left: 280px;
+  padding: 20px;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR */
+.docentes-content {
+  width: 800px;
+  padding: 40px 30px;
+  background: rgba(99, 102, 241, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 40px rgba(99, 102, 241, 0.3);
+  transition: 0.3s ease;
+}
+
+.docentes-content:hover {
+  transform: translateY(-3px);
+}
+
+/* TÍTULO */
+.docentes-text {
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.docentes-text::before,
+.docentes-text::after {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee;
+}
+
+.docentes-text::after {
+  animation: pulse 1.2s infinite;
+}
+
+/* GRUPO DE CAMPO */
+.docentes-field {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* LABEL */
+.docentes-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* INPUT */
+.docentes-input {
+  width: 100%;
+  padding: 14px 16px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.docentes-input:focus {
+  border: 1px solid #22d3ee;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.docentes-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* TEXTO DE AYUDA (para ejemplos) */
+.docentes-help {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* LINK (para la imagen) */
+.docentes-link {
+  margin-top: 5px;
+}
+
+.docentes-link a {
+  font-size: 14px;
+  color: #22d3ee;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.docentes-link a:hover {
+  text-decoration: underline;
+}
+
+/* BOTÓN */
+.docentes-button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #1e1b4b, #4338ca);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.docentes-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  box-shadow: 0 10px 20px rgba(34, 211, 238, 0.4);
+}
+
+.docentes-button:active {
+  transform: translateY(1px);
+}
+
+/* ANIMACIÓN */
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
