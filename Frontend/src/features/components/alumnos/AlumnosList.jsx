@@ -5,7 +5,7 @@ function AlumnosList() {
     <div className="contentdashboard">
       <table
         className="table"
-        style={{ backgroundColor: "#6366f1", borderRadius: "10px 20px 0 0" }}
+        style={{ backgroundColor: "#6366f1", borderRadius: "20px 20px 20px 20px" }}
       >
         {" "}
         <thead className="table-light">

@@ -1,40 +1,56 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Inicio from "./features/pages/Inicio";
 import Dashboard from "../src/features/pages/Dashboard";
 import Materias from "../src/features/pages/Materias";
 import Docentes from "../src/features/pages/Docentes";
+import { useState } from "react";
 
 import "./App.css";
 
 function App() {
+  const [isSidebarVisible, setSidebarVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setSidebarVisible(!isSidebarVisible);
+  };
+
   return (
     <Router>
-      <div className="sidebar">
-        <Link to="/">
-          <i className="bi bi-house-door me-2"></i> Inicio
-        </Link>
+      <div className="app-container">
+        <div className={`sidebar ${isSidebarVisible ? "expanded" : "collapsed"}`}>
+          <div className="sidebar-header" onClick={toggleSidebar}>
+            <i className="bi bi-list toggle-icon"></i>
+            <span className="logo-text">SISTEMA</span>
+          </div>
 
-        <Link to="/alumnos">
-          <i className="bi bi-people me-2"></i> Alumnos
-        </Link>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}> 
+            <i className="bi bi-house-door"></i> <span>Inicio</span>
+          </NavLink>
 
-        <Link to="/docentes">
-          <i className="bi bi-people me-2"></i> Docentes
-        </Link>
+          <NavLink to="/alumnos" className={({ isActive }) => (isActive ? "active" : "")}> 
+            <i className="bi bi-person-badge"></i> <span>Alumnos</span>
+          </NavLink>
 
-        <Link to="/materias">
-          <i className="bi bi-book me-2"></i> Materias
-        </Link>
-      </div>
+          <NavLink to="/docentes" className={({ isActive }) => (isActive ? "active" : "")}> 
+            <i className="bi bi-people"></i> <span>Docentes</span>
+          </NavLink>
 
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/alumnos" element={<Dashboard />} />
-          <Route path="/docentes" element={<Docentes />} />
-          <Route path="/materias" element={<Materias />} />
-        </Routes>
+          <NavLink to="/materias" className={({ isActive }) => (isActive ? "active" : "")}> 
+            <i className="bi bi-book"></i> <span>Materias</span>
+          </NavLink>
+        </div>
+
+        <div className="content">
+          <div className="page-container">
+            <Routes>
+              <Route path="/" element={<Inicio />} />
+              <Route path="/alumnos" element={<Dashboard />} />
+              <Route path="/docentes" element={<Docentes />} />
+              <Route path="/materias" element={<Materias />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </Router>
   );

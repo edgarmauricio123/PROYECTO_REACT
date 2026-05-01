@@ -1,124 +1,133 @@
- .contentdashboard {
-        margin-left: 2px;
-        padding: 20px;
-      }
-
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 1100px;
-  background-color: #e0e7ff;
+.alumnos-form-container {
   padding: 20px;
-  border-radius: 20px;
-  position: relative;
-  align-content: center;
+  width: 100%;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.title {
-  font-size: 28px;
-  color: royalblue;
+.alumnos-content {
+  width: 800px;
+  padding: 40px 30px;
+  background: rgba(99, 102, 241, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2), 0 0 40px rgba(99, 102, 241, 0.3);
+  transition: 0.3s ease;
+}
+
+.alumnos-content:hover {
+  transform: translateY(-3px);
+}
+
+.alumnos-text {
+  font-size: 33px;
   font-weight: 600;
-  letter-spacing: -1px;
+  margin-bottom: 35px;
+  color: #ffffff;
   position: relative;
   display: flex;
   align-items: center;
   padding-left: 30px;
 }
 
-.title::before,.title::after {
+.alumnos-text::before,
+.alumnos-text::after {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
   left: 0px;
-  background-color: royalblue;
+  background-color: #22d3ee;
+  box-shadow: 0 0 10px #22d3ee;
 }
 
-.title::before {
-  width: 18px;
-  height: 18px;
-  background-color: royalblue;
+.alumnos-text::after {
+  animation: pulse 1.2s infinite;
 }
 
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-
-
-.signin {
-  text-align: center;
-}
-
-.signin a {
-  color: royalblue;
-}
-
-.signin a:hover {
-  text-decoration: underline royalblue;
-}
-
-.flex {
+.form {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  gap: 20px;
+  position: relative;
 }
 
 .form label {
   position: relative;
+  width: 100%;
 }
 
 .form label .input {
   width: 100%;
-  padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
+  padding: 14px 16px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  backdrop-filter: blur(5px);
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.form label .input:focus {
+  border: 1px solid #22d3ee;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.form label .input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .form label .input + span {
   position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
+  left: 12px;
+  top: 0px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85em;
+  transition: 0.25s ease;
 }
 
 .form label .input:placeholder-shown + span {
-  top: 15px;
+  top: 13px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,.form label .input:valid + span {
-  top: 30px;
+.form label .input:focus + span,
+.form label .input:valid + span {
+  color: #22d3ee;
+  top: 4px;
   font-size: 0.7em;
   font-weight: 600;
 }
 
-.form label .input:valid + span {
-  color: green;
-}
-
 .submit {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
   border: none;
-  outline: none;
-  background-color: royalblue;
-  padding: 10px;
-  border-radius: 10px;
+  cursor: pointer;
   color: #fff;
-  font-size: 16px;
-  transform: .3s ease;
+  background: linear-gradient(135deg, #1e1b4b, #4338ca);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .submit:hover {
-  background-color: rgb(56, 90, 194);
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  box-shadow: 0 10px 20px rgba(34, 211, 238, 0.4);
 }
 
 @keyframes pulse {
@@ -126,9 +135,8 @@
     transform: scale(0.9);
     opacity: 1;
   }
-
   to {
-    transform: scale(1.8);
+    transform: scale(1.6);
     opacity: 0;
   }
 }

@@ -20,7 +20,7 @@ function Inicio() {
         labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio"],
         datasets: [
           {
-            label: "Ventas",
+            label: "Alumnos Promedio",
             data: [10, 25, 15, 30, 20, 35],
             borderWidth: 2,
             tension: 0.4,
