@@ -1,8 +1,7 @@
 .docentes-form-container {
-  margin-left: 280px;
   padding: 20px;
+  width: 100%;
   background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
