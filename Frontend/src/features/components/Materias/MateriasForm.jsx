@@ -20,8 +20,10 @@ function MateriasForm({ materiaEditar, onFinish, onCancel }) {
       setForm({
         id: materiaEditar.id || "",
         nombre: materiaEditar.nombre || "",
-        creditos: materiaEditar.creditos || "",
-        semestre: materiaEditar.semestre || "",      
+        creditos: String(materiaEditar.creditos ?? ""),
+        semestre: typeof materiaEditar.semestre === "object"
+          ? (materiaEditar.semestre?.nombre ?? "")
+          : String(materiaEditar.semestre ?? ""),
       });
       if (formRef.current) {
         formRef.current.scrollIntoView({ behavior: "smooth" });
@@ -177,6 +179,8 @@ function MateriasForm({ materiaEditar, onFinish, onCancel }) {
                 value={form.creditos}
                 onChange={handleChange}
                 required
+                min="1"
+                max="12"
               />
               <span>Creditos</span>
             </label>
