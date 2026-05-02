@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Inicio from "./features/pages/Inicio";
-import Dashboard from "../src/features/pages/Dashboard";
+import Alumnos from "../src/features/pages/Alumnos";
 import Materias from "../src/features/pages/Materias";
 import Docentes from "../src/features/pages/Docentes";
 import { useState } from "react";
@@ -45,7 +45,7 @@ function App() {
           <div className="page-container">
             <Routes>
               <Route path="/" element={<Inicio />} />
-              <Route path="/alumnos" element={<Dashboard />} />
+              <Route path="/alumnos" element={<Alumnos />} />
               <Route path="/docentes" element={<Docentes />} />
               <Route path="/materias" element={<Materias />} />
             </Routes>
