@@ -92,6 +92,21 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
+select.docentes-input option {
+  background: #4338ca;
+  color: #fff;
+  padding: 10px;
+}
+
+select.docentes-input {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+select.docentes-input:valid {
+  color: #fff;
+}
+
 /* TEXTO DE AYUDA (para ejemplos) */
 .docentes-help {
   display: block;
@@ -142,6 +157,27 @@
   transform: translateY(1px);
 }
 
+.btn-cancel-docente {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cancel-docente:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  box-shadow: 0 10px 20px rgba(107, 114, 128, 0.4);
+}
+
 /* ANIMACIÓN */
 @keyframes pulse {
   from {
@@ -152,4 +188,137 @@
     transform: scale(1.6);
     opacity: 0;
   }
+}
+
+/* MODALES */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-success {
+  text-align: center;
+}
+
+.modal-success-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.modal-success-icon i {
+  font-size: 36px;
+  color: white;
+}
+
+.modal-success h2 {
+  color: #1e1b4b;
+  margin-bottom: 8px;
+}
+
+.modal-success p {
+  color: #6b7280;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.modal-confirm {
+  text-align: center;
+}
+
+.modal-confirm-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.modal-confirm-icon i {
+  font-size: 32px;
+  color: white;
+}
+
+.modal-confirm h2 {
+  color: #1e1b4b;
+  margin-bottom: 8px;
+}
+
+.modal-confirm p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.modal-confirm-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-modal {
+  padding: 12px 30px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-modal-ok {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  width: 100%;
+  padding: 14px;
+}
+
+.btn-modal-ok:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+.btn-modal-yes {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.btn-modal-yes:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(34, 197, 94, 0.4);
+}
+
+.btn-modal-no {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+}
+
+.btn-modal-no:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(107, 114, 128, 0.4);
 }
