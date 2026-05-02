@@ -1,11 +1,28 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 import MateriasForm from "../components/Materias/MateriasForm";
 import MateriasList from "../components/Materias/MateriasList";
+
 function Materias() {
+  const [refresh, setRefresh] = useState(0);
+  const [editingMateria, setEditingMateria] = useState(null);
+
   return (
     <div>
-      <MateriasForm />
-      <MateriasList />
+      <MateriasForm
+        materiaEditar={editingMateria}
+        onFinish={() => {
+          setRefresh((prev) => prev + 1);
+          setEditingMateria(null);
+        }}
+        onCancel={() => setEditingMateria(null)}
+      />
+      <MateriasList
+        refresh={refresh}
+        onEditar={(materia) => {
+          setEditingMateria(materia);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      />
     </div>
   );
 }

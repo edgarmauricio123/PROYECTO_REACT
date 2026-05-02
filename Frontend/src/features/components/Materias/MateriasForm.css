@@ -144,7 +144,31 @@
   box-shadow: 0 10px 20px rgba(34, 211, 238, 0.4);
 }
 
-/* TEXTO */
+/* BOTON CANCELAR */
+.btn-cancel-materia {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cancel-materia:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  box-shadow: 0 10px 20px rgba(107, 114, 128, 0.4);
+}
+
+/* MODALES */
 .materias-form-container .signin {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
